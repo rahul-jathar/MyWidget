@@ -54,7 +54,8 @@ namespace MyWidgetApp
                         {
                             id = 0,
                             on = brightnessValue == 0 ? false : true,
-                            bri = brightnessValue
+                            bri = brightnessValue,
+                            col = new List<List<int>>(){new List<int>() { 255, 255, 255, 255} }
                         }
                     }
                 };
@@ -108,7 +109,8 @@ namespace MyWidgetApp
                         {
                             id = 1,
                             on = brightnessValue == 0 ? false : true,
-                            bri = brightnessValue
+                            bri = brightnessValue,
+                            col = new List<List<int>>(){new List<int>() { 255, 255, 255, 255} }
                         }
                     }
                 };
@@ -142,7 +144,7 @@ namespace MyWidgetApp
                 }
             };
 
-            TrackBar trackBar = new TrackBar
+            TrackBar trackBar = new()
             {
                 Location = new System.Drawing.Point(10, 130),
                 Size = new System.Drawing.Size(100, 45),
@@ -200,5 +202,6 @@ namespace MyWidgetApp
         public int cct { get; set; }
         public int set { get; set; }
         public string n { get; set; }
+        public List<List<int>> col { get; set; }
     }
 }
